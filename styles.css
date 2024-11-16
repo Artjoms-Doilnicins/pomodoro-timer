@@ -1,0 +1,89 @@
+:root {
+	--bg-color: #1a1c21;
+	--text-color: #ffffff;
+	--button-color: #ffffff;
+	--button-hover-scale: 1.1;
+	--button-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	--container-bg: linear-gradient(145deg, #3a3f47, #1e222a);
+	--container-radius: 15px;
+	--container-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	animation: background-animation 10s infinite alternate;
+}
+
+@keyframes background-animation {
+	0% {
+		background-color: #282c34;
+	}
+	50% {
+		background-color: #1e1e2f;
+	}
+	100% {
+		background-color: var(--bg-color);
+	}
+}
+
+.container {
+	text-align: center;
+	background: var(--container-bg);
+	border-radius: var(--container-radius);
+	padding: 2rem;
+	box-shadow: var(--container-shadow);
+}
+
+.container p {
+	margin-bottom: 1rem;
+}
+
+.time {
+	font-size: 3rem;
+	font-weight: bold;
+	color: var(--button-color);
+	margin-bottom: 2rem;
+}
+
+.btns button {
+	border: none;
+	border-radius: 5px;
+	padding: 0.5rem 1.5rem;
+	font-size: 1rem;
+	cursor: pointer;
+	margin: 0 0.5rem;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btns button:hover {
+	transform: scale(var(--button-hover-scale));
+	box-shadow: var(--button-shadow);
+}
+
+.btns button:active {
+	transform: scale(1);
+}
+
+.start-btn {
+	background-color: rgb(2, 178, 2);
+}
+
+.pause-btn {
+	background-color: rgb(228, 228, 22);
+}
+
+.reset-btn {
+	background-color: rgb(255, 135, 155);
+}
